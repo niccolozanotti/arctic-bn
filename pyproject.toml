@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "scikit-build", "cmake>=3.18", "numpy>=2.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["climate_network"]
+
+[project]
+name = "climate_network"
+version = "0.1"
+description = "A library for creating complex networks of geospatial time series data"
+readme = "README.md"
+authors = [
+    { name = "Niccolò Zanotti", email = "niccolo.zanotti@protonmail.com" },
+    { name = "Francesco Baiocchi", email = "francescobaiocchi@icloud.com" },
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/niccolozanotti/climate-network"
+Issues = "https://github.com/niccolozanotti/climate-network/issues"
