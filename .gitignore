@@ -1,3 +1,7 @@
+# Data-related files
+**.grib
+**.idx
+
 # Apple Desktop Services Store
 **.DS_Store
 
