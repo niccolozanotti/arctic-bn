@@ -1,0 +1,15 @@
+repos:
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  # Ruff version.
+  rev: v0.11.13
+  hooks:
+    # Run the linter.
+    - id: ruff-check
+    # Run the formatter.
+    - id: ruff-format
+
+- repo: https://github.com/kynan/nbstripout
+  rev: 0.8.1
+  hooks:
+    - id: nbstripout 
+      args: ['--extra-keys=metadata.celltoolbar metadata.language_info.codemirror_mode.version metadata.language_info.pygments_lexer metadata.language_info.version metadata.toc metadata.notify_time metadata.varInspector cell.metadata.heading_collapsed cell.metadata.hidden cell.metadata.code_folding cell.metadata.tags cell.metadata.init_cell']
