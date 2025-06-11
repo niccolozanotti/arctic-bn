@@ -24,10 +24,9 @@ you can build the package in a virtual environment (pip/uv)
 (.venv) pip install . -v
 ```
 or by preprending `uv` if using uv.
-To install the development or plotting optional dependencies simply run
+To install the optional dependencies run
 ```shell
-(.venv) pip install ".[dev]"
-(.venv) pip install ".[plot]"
+(.venv) pip install ".[dev,data,notebooks]"
 ```
 
 ### Tests
