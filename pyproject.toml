@@ -27,9 +27,52 @@ Issues = "https://github.com/niccolozanotti/climate-network/issues"
 dev = [
     "cmakelang>=0.6.13",
     "fortitude-lint>=0.7.3",
+    "nbstripout>=0.8.1",
+    "pre-commit>=4.2.0",
     "ruff>=0.11.9",
     "zizmor>=1.7.0",
 ]
-plot = [
-    "matplotlib",
+data = [
+    "cdsapi>=0.7.6",
+    "cfgrib>=0.9.15.0",
+    "xarray>=2025.6.0",
+]
+notebooks = [
+    "cartopy>=0.24.1",
+    "eccodes>=2.41.0",
+    "matplotlib>=3.10.3",
+    "numpy>=2.2.5",
+    "polars>=1.30.0",
+    "typing-extensions>=4.14.0",
+    "xarray>=2025.6.0",
+]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint]
+# See https://docs.astral.sh/ruff/rules for full details of each ruleset.
+# Enable:  D: `pydocstyle`, PL: `pylint`, I: `isort`, W: `pycodestyle whitespace`
+#          NPY: `numpy`, FLY: `flynt`, RUF: `ruff`
+#          From flake8: "ARG", "SLF", "S", "BLE", "B", "A", "C4", "EM", "ICN",
+#                       "PIE", "Q", "RSE", "SIM", "TID"
+select = ["D", "PL", "I", "E", "W", "NPY", "FLY", "RUF",
+          "ARG", "SLF", "S", "BLE","B", "A", "C4", "EM", "ICN", "PIE", "Q", "RSE",
+          "SIM", "TID"]
+# Enable D417 (Missing argument description) on top of the NumPy convention.
+extend-select = ["D417"]
+# Ignore SIM108 (use ternary instead of if-else) as it can arguably obscure intent.
+# Ignore RUF002 (ambiguous characters) as it does not allow apostrophes in strings.
+ignore = ["SIM108", "RUF002"]
+
+[tool.ruff.lint.pydocstyle]
+# Use NumPy convention for checking docstrings
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"*/__init__.py" = [
+    "D104" # Allow missing docstring for module
+]
+"*.ipynb" = [
+    "I002",  # Missing required import (allows imports anywhere)
 ]
