@@ -49,6 +49,7 @@ data = [
 notebooks = [
     "cartopy>=0.24.1",
     "eccodes>=2.41.0",
+    "jupyter>=1.1.1",
     "matplotlib>=3.10.3",
     "numpy>=2.2.5",
     "polars>=1.30.0",
