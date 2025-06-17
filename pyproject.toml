@@ -16,7 +16,16 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "cartopy>=0.24.1",
+    "cfgrib>=0.9.15.0",
+    "eccodes>=2.41.0",
+    "matplotlib>=3.10.3",
     "numpy>=2.0",
+    "polars>=1.30.0",
+    "scipy>=1.15.3",
+    "seaborn>=0.13.2",
+    "typing-extensions>=4.14.0",
+    "xarray>=2025.6.0",
 ]
 
 [project.urls]
